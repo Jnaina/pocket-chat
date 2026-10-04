@@ -1,0 +1,35 @@
+name: PocketChat
+options:
+  bundleIdPrefix: com.jnaina
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: ""          # set your own Apple team ID here, or pass DEVELOPMENT_TEAM=<id> to xcodebuild
+    CODE_SIGN_STYLE: Automatic
+targets:
+  PocketChat:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Assets.xcassets
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Pocket Chat
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        LSApplicationCategoryType: public.app-category.productivity
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jnaina.pulstar
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_OPTIMIZATION_LEVEL: "-O"
+        SWIFT_COMPILATION_MODE: wholemodule
